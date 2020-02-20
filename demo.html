@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>TouroLover</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="build/css/intlTelInput.css">
+  <link rel="stylesheet" href="build/css/demo.css">
+</head>
+
+<body>
+  <h1>Enter Your Mobile Number</h1>
+  <form>
+    <input id="phone" class="form-control" name="phone" type="tel"><button onclick="document.getElementById('phone').value = ''">x</button><br>
+    <button class="btn btn-primary" type="button">Get OTP</button>
+  </form>
+
+  <script src="build/js/intlTelInput.js"></script>
+  <script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      utilsScript: "build/js/utils.js",
+    });
+  </script>
+</body>
+
+</html>
